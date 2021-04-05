@@ -1,13 +1,13 @@
 import argparse
 import joblib
 import numpy as np
-from sklearn.linear_model import SGDRegressor
+from sklearn.ensemble import RandomForestClassifier
 
 def train_model(x_train, y_train):
     x_train_data = np.load(x_train)
     y_train_data = np.load(y_train)
 
-    model = SGDRegressor(verbose=1)
+    model = RandomForestClassifier(n_estimators=100,max_depth=1, random_state=42)
     model.fit(x_train_data, y_train_data)
     
     joblib.dump(model, 'model.pkl')

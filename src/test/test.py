@@ -8,12 +8,7 @@ def test_model(x_test, y_test, model_path):
     y_test_data = np.load(y_test)
 
     model = joblib.load(model_path)
-    y_pred = model.predict(x_test_data)
-
-    err = mean_squared_error(y_test_data, y_pred)
-    
-    with open('output.txt', 'a') as f:
-        f.write(str(err))
+    print(model.score(x_test_data, y_test_data))
 
 
 

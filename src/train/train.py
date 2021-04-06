@@ -13,7 +13,7 @@ def train_model(x_train, y_train, x_test, y_test):
     model = RandomForestClassifier(n_estimators=10,max_depth=1, random_state=42)
     model.fit(x_train_data, y_train_data)
     print("Accuracy: ", model.score(x_test, y_test))
-    #joblib.dump(model, 'model.pkl')
+    joblib.dump(model, 'model.pkl')
 
 
 if __name__ == '__main__':

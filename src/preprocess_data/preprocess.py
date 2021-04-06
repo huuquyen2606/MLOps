@@ -15,8 +15,8 @@ def _preprocess_data():
      np.save('x_test.npy', X_test)
      np.save('y_train1.npy', y_train1)
      np.save('y_test.npy', y_test)
-     np.save('x_train2.npy', X_train1)
-     np.save('y_train2.npy', y_train1)
+     np.save('x_train2.npy', X_train2)
+     np.save('y_train2.npy', y_train2)
      
 if __name__ == '__main__':
      print('Preprocessing data...')

@@ -11,7 +11,7 @@ def test_model(model1, model2, x_test, y_test):
     model2 = joblib.load(model2)
     model2.estimators_ += model2.estimators_
     model2.n_estimators = 20
-    print("This is Test of Pro Player")
+    print("This is The Level of Pro Player was demonstrated ^-^")
     print("Accuracy of merged model: ", model2.score(x_test_data, y_test_data))
 
 
